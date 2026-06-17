@@ -9,9 +9,14 @@ The dataset comprises **284,807 transactions**, presenting an extreme class imba
 * **Normal Transactions (Class 0):** 284,315 ($99.827\%$)
 * **Fraudulent Transactions (Class 1):** 492 ($0.173\%$)
 
-To prevent the models from favoring the majority class, the data was partitioned using a **75/25 Train-Test Split**:
+To prevent the models from favoring the majority class, the data was partitioned using a **80/20 Train-Test Split**:
 * **Training Set:** 213,605 samples (369 Fraudulent)
 * **Testing Set:** 71,202 samples (123 Fraudulent)
+## Data Source & Accessibility
+
+* **Source:** The model utilizes the standard, real-world benchmark **Credit Card Fraud Detection Dataset** originally collected during a research collaboration between Université Libre de Bruxelles (ULB) and Worldline.
+* **Access:** The dataset can be downloaded directly from [Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud).
+* **Data Dimensions:** The source file `creditcard.csv` contains transactions made by European cardholders over a two-day period, featuring 28 numerical features generated via Principal Component Analysis (PCA) transformations ($V1$ through $V28$), alongside `Time`, `Amount`, and the binary target variable `Class`.
 
 ### 2. Algorithmic Oversampling (SMOTE)
 To ensure robust boundary delineation during model training, **Synthetic Minority Over-sampling Technique (SMOTE)** was applied exclusively to the training partition. This synthetically expanded the minority pool from **369** to **213,236** balanced samples, mapping perfectly to the majority class size and eliminating algorithmic bias toward normal transactions.
