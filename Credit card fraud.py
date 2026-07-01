@@ -44,7 +44,7 @@ print("="*80)
 print("STEP 2: RAW NUMBERS BEFORE DATA MODELING (FULL DATASET)")
 print("="*80)
 
-df = pd.read_csv(r"c:\Users\NEW LAPTOP CITY\.vscode\Internship Projects\Project 2\creditcard.csv")
+df = pd.read_csv(r"c:creditcard.csv")
 
 total_raw = len(df)
 normal_raw = (df['Class'] == 0).sum()
